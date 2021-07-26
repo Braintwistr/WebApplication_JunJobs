@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication_JunJobs.Models.Vacancy>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vacancies</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VacancyName)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-success" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

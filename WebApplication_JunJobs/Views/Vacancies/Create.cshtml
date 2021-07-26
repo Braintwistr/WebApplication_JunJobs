@@ -1,0 +1,58 @@
+﻿@model WebApplication_JunJobs.Models.Vacancy
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Vacancy</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VacancyName" class="control-label">Name</label>
+                <input asp-for="VacancyName" class="form-control" />
+                <span asp-validation-for="VacancyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VacancyDescription" class="control-label">Description</label>
+                <input asp-for="VacancyDescription" class="form-control" />
+                <span asp-validation-for="VacancyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VacancyMainSkills" class="control-label">Main Skills</label>
+                <input asp-for="VacancyMainSkills" class="form-control" />
+                <span asp-validation-for="VacancyMainSkills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VacancyResposibilities" class="control-label">Resposibilities</label>
+                <input asp-for="VacancyResposibilities" class="form-control" />
+                <span asp-validation-for="VacancyResposibilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VacancyAboutCompany" class="control-label">AboutCompany</label>
+                <input asp-for="VacancyAboutCompany" class="form-control" />
+                <span asp-validation-for="VacancyAboutCompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VacancyContacts" class="control-label">Contacts</label>
+                <input asp-for="VacancyContacts" class="form-control" />
+                <span asp-validation-for="VacancyContacts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

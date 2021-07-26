@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Braintwister\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Braintwister\\.nuget\\packages",
+      "D:\\Программы\\Vs\\NuGetPackages"
+    ]
+  }
+}

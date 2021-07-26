@@ -1,0 +1,63 @@
+﻿@model WebApplication_JunJobs.Models.CV
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CV</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CvName" class="control-label">Name</label>
+                <input asp-for="CvName" class="form-control" />
+                <span asp-validation-for="CvName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvDescription" class="control-label">Description</label>
+                <input asp-for="CvDescription" class="form-control" />
+                <span asp-validation-for="CvDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvWorkExperience" class="control-label">Work experience</label>
+                <input asp-for="CvWorkExperience" class="form-control" />
+                <span asp-validation-for="CvWorkExperience" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvHardSkills" class="control-label">Hard skills</label>
+                <input asp-for="CvHardSkills" class="form-control" />
+                <span asp-validation-for="CvHardSkills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvEducation" class="control-label">Education</label>
+                <input asp-for="CvEducation" class="form-control" />
+                <span asp-validation-for="CvEducation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvContacs" class="control-label">Contacs"</label>
+                <input asp-for="CvContacs" class="form-control" />
+                <span asp-validation-for="CvContacs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CvLink" class="control-label">Link on your CV</label>
+                <input asp-for="CvLink" class="form-control" />
+                <span asp-validation-for="CvLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
